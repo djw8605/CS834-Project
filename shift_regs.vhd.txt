@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity \ShiftRegister\ is 
+port (data_in: in STD_LOGIC_VECTOR(15 downto 0);
+     clk: in STD_LOGIC;
+     A, B, C, D, E, F, G, H: out STD_LOGIC_VECTOR(15 downto 0));
+end \ShiftRegister\;
+
+
+
+architecture SHIFTER of \ShiftRegister\ is
+   signal data_a, data_b, data_c, data_d, data_e, data_f, data_g, data_h: STD_LOGIC_VECTOR(15 downto 0);
+begin
+SHIFT:process (clk, data_in)
+   
+begin
+   if clk'event and clk = '1' then
+      A <= data_in;
+      B <= data_a;
+      C <= data_b;
+      D <= data_c;
+      E <= data_d;
+      F <= data_e;
+      G <= data_f;
+      H <= data_g;
+     
+   end if;
+
+end process;
+
+
+end SHIFTER;
+
+
+
+
+
+
