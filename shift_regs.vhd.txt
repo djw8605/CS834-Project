@@ -17,7 +17,6 @@ SHIFT:process (clk, data_in)
    
 begin
    if clk'event and clk = '1' then
-      A <= data_in;
       B <= data_a;
       C <= data_b;
       D <= data_c;
@@ -25,8 +24,8 @@ begin
       F <= data_e;
       G <= data_f;
       H <= data_g;
+      A <= data_in;
 
-      data_a <= data_in;
       data_b <= data_a;
       data_c <= data_b;
       data_d <= data_c;
@@ -34,6 +33,7 @@ begin
       data_f <= data_e;
       data_g <= data_f;
       data_h <= data_g;
+      data_a <= data_in;
      
    end if;
 
