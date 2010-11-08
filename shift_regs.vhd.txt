@@ -25,6 +25,15 @@ begin
       F <= data_e;
       G <= data_f;
       H <= data_g;
+
+      data_a <= data_in;
+      data_b <= data_a;
+      data_c <= data_b;
+      data_d <= data_c;
+      data_e <= data_d;
+      data_f <= data_e;
+      data_g <= data_f;
+      data_h <= data_g;
      
    end if;
 
