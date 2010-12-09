@@ -1,5 +1,5 @@
 \subsection{VHDL Design}
-We decided to design our filter using as much HDL as possible.  Therefore, every component is written in VHDL, and are synthesized for the final design. The VHDL is separated into components listed below.  These components are then sythensized using the rc cadence synthesizer.  
+We decided to design our filter using as much HDL as possible.  Therefore, every component is written in VHDL, and are synthesized for the final design. The VHDL is separated into components listed below.  These components are then sythensized using the rc and Encounter cadence synthesizer.  
 
 Separate components:
 \begin{itemize}
@@ -16,7 +16,39 @@ The source to the VHDL components are included in the appendix.
 
 
 \subsection{Synthesis}
+Synthesis was done using rc cadence synthesizer and the Encounter tool.  For the encounter tool, we followed the instructions listed in lab 3.  The Encounter routing and placement on the CONV\_MULT component took 45 minutes to complete while the FullAdder was near instant.  See Figure \ref{fig:convmult} for the sythensized Convolution hardware.
 
+\begin{figure}
+\centering
+\includegraphics[width=6.5in]{images/CONV_MULT}
+\caption{Convolution hardware after synthesis}
+\label{fig:convmult}
+\end{figure}
 
 
 \subsection{Final Layout \& Routing}
+Since each component was designed in a separate VHDL file, they had to be connected at a high level.  See Figure \ref{fig:filterschematic} for the schematic of the connected high level components.  This logical layout closely resembles the layout shown in \ref{fig:optimizedfilter}.
+
+% 2500x2500 
+After creating the schematic, we used the Cadence router to route between the top level components.  The chip size needed to be increased to 2500x2500 microns in order to accommodate the components.  The convolution chip alone is 1500x1500 microns.  The routing completes in about an hour with no un-routable endpoints.  See Figure \ref{fig:filterrouted} for the routed final layout.
+
+
+\begin{figure}
+\centering
+\includegraphics[angle=90,height=8in]{images/Filter-Schematic}
+\caption{Filter Schematic}
+\label{fig:filterschematic}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[angle=90,height=8in]{images/FinalRouted}
+\caption{Filter Routed}
+\label{fig:filterrouted}
+\end{figure}
+
+
+
+
+
