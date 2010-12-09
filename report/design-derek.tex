@@ -42,5 +42,15 @@ The adders shown at the bottom of Figure \ref{fig:optimizedfilter} are frequentl
 
 Compare the ripple carry to propagate/carry (PG) adders that are designed to optimize latency.  The PG adders have significantly more hardware since it has to pre-calculate propagates and carries.  
 
+We also attempted to use a clock-gated D flip flop seen in Figure \ref{fig:gateclocked}.  While doing simulations of the VHDL, we discovered that this design was flawed.  When the clock was high, Q stabilized to the value of D.  This is because the XOR gate with the clock and the D input would cause the 'clock' input to the flip flop to change, therefore causing it to save the input.  The clock-gated D flip-flop acted as a latch.  We did not use this optimization in the final design.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=5in]{images/clockgating}
+\caption{Clock gating low power flip-flop.}
+\label{fig:gateclocked}
+\end{figure}
+
 
 
