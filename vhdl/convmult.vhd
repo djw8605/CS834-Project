@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_signed.all;
 use IEEE.numeric_std.all;
 
 entity CONV_MULT is
@@ -18,16 +18,16 @@ begin
 
 	-- Addition for taking advantage of the filter symmetricity.
 	-- Result is in Q1.15.
-	A0 <= ("0" & D0) + ("0" & D6);
-	A1 <= ("0" & D1) + ("0" & D5);
-	A2 <= ("0" & D2) + ("0" & D4);
-	A3 <= ("0" & D3);
+	A0 <= (D0(15) & D0) + (D6(15) & D6);
+	A1 <= (D1(15) & D1) + (D5(15) & D5);
+	A2 <= (D2(15) & D2) + (D4(15) & D4);
+	A3 <= (D3(15) & D3);
 	
 	-- Multiply by coeffs.
 	B0 <= A0 * C0;
 	B1 <= A1 * C1;
 	B2 <= A2 * C2;
-	B3 <= A2 * C3;
+	B3 <= A3 * C3;
 	
 	-- Convert from Q1.31 to Q15.
 	M0 <= B0(31 downto 16);
