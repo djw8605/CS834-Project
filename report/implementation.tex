@@ -3,16 +3,16 @@ We decided to design our filter using as much HDL as possible.  Therefore, every
 
 Separate components:
 \begin{itemize}
-\item \verb=SHIFT_REG=
+\item \verb=SHIFT_REG=: Shift Register (Appendix \ref{lst:shiftreg.vhd})
 	\begin{itemize}
-		\item \verb=D_FF=
+		\item \verb=D_FF=: D-Flip Flop (Appendix \ref{lst:dff.vhd})
 	\end{itemize}
-\item \verb=CONV_MULT=
-\item \verb=SUM=
+\item \verb=CONV_MULT=: Convolution (Appendix \ref{lst:convmult.vhd})
+\item \verb=SUM=: Summation (Appendix \ref{lst:sum.vhd})
 	\begin{itemize}
-		\item \verb=ADD16=
+		\item \verb=ADD16=: 16-Bit Adder (Appendix \ref{lst:add16.vhd})
 		\begin{itemize}
-			\item \verb=FULL_ADDER=
+			\item \verb=FULL_ADDER=: Full Adder (Appendix \ref{lst:fulladder.vhd})
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
