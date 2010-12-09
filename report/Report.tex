@@ -7,7 +7,6 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
-\
 \author{Derek Weitzel \& Yutaka Tsutano}
 
 \begin{document}
@@ -18,14 +17,16 @@ Derek Weitzel \& Yutaka Tsutano
 }
 \end{center}
 
-\include{introduction.tex}
+\include{introduction}
 
-\include{design-yutaka.tex}
-\include{design-derek.tex}
+\include{design-yutaka}
+\include{design-derek}
 
-\include{implementation.tex}
+\include{implementation}
 
-\include{conclusion.tex}
+\include{conclusion}
+
+\if 0
 
 \section{Overview}
 In this project, we will create a 16 bit low pass filter.  This filter is similar to those used in audio processing.  This specific properties of the filter where picked to simplify the design.
@@ -107,6 +108,6 @@ $C_8$ & -1.55107884796477e-18 \\
 \label{fig:diagram}
 \end{figure}
 
-
+\fi
 
 \end{document}
