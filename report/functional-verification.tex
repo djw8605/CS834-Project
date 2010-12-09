@@ -1,0 +1,3 @@
+To verify the correctness of the VHDL design files, we have written a C++ program that generates test cases. This program first generates test input with random noise. Then it computes the output using the equivalent filter algorithm in Q15 format. The result is stored in a text file which can be read by a VHDL testbench \texttt{filter\_tb.vhd}.
+
+We verified that the every bit of the C++ program output and VHDL testbench output matched, therefore the VHDL should be correct with high probability.
