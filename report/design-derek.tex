@@ -1,0 +1,25 @@
+\subsection{Input \& Output}
+The input and output of our design are shown in table \ref{table:inputoutput}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l | l | c}
+\hline
+Input/Output & Description & Bits \\
+\hline \hline
+Input & Clock & 1 \\
+Input & Data In & 16 \\
+Output & Convolution & 16 \\
+\end{tabular}
+\caption{Description of input and output to the filter}
+\label{table:inputoutput}
+\end{table}
+
+
+
+\subsection{Power Optimization}
+
+We will tackle power concerns by optimizing the tree of adders (see Figure \ref{fig:diagram}).  Since we have a constant number of adders, we can create a large adder that will be able to minimize redundant gates.  Further, because of the symmetric property of the filter, we can minimize the number of multipliers by adding symmetric registers, then multiplying by the coefficient.  
+
+
+
