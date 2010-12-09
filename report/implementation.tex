@@ -1,5 +1,5 @@
 \subsection{VHDL Design}
-We decided to design our filter using as much HDL as possible.  Therefore, every component is written in VHDL, and are synthesized for the final design. The VHDL is separated into components listed below.  These components are then sythensized using the \texttt{rc} and Encounter cadence synthesizer.  
+We decided to design our filter using as much HDL as possible.  Therefore, every component is written in VHDL, and are synthesized for the final design. The VHDL is separated into components listed below.  These components are then synthesized using the \texttt{rc} and Encounter cadence synthesizer.  
 
 Separate components:
 \begin{itemize}
@@ -24,7 +24,7 @@ The source of the VHDL components are included in the appendix.
 
 
 \subsection{Synthesis}
-Synthesis was done using rc cadence synthesizer and the Encounter tool.  For the encounter tool, we followed the instructions listed in lab 3.  The Encounter routing and placement on the \verb=CONV_MULT= component took 45 minutes to complete while the FullAdder was near instant.  See Figure \ref{fig:convmult} for the sythensized Convolution hardware.
+Synthesis was done using rc cadence synthesizer and the Encounter tool.  For the encounter tool, we followed the instructions listed in lab 3.  The Encounter routing and placement on the \verb=CONV_MULT= component took 45 minutes to complete while the FullAdder was near instant.  See Figure \ref{fig:convmult} for the synthesizedConvolution hardware.
 
 \begin{figure}[htbp]
 \centering

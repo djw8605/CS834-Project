@@ -20,7 +20,7 @@ Output & Convolution & 16 \\
 \subsection{Power Optimization}
 
 % Duplicate multipliers
-We will optimize power by removing duplicate mulitpliers.  These duplicate multipliers are created because the filter is symmetric, therefore an adder can be used remove an adder.  In the naive filter, shown in Figure \ref{fig:naivefilter}, the constant is multiplied against each register value.  Since the constants are symmetric, ie $C0$ is the same as $C6$, this can be optimized using the associative rule.  In Figure \ref{fig:optimizedfilter}, you can see that we have removed 3 of the multipliers.  Instead, we add the values in the registers before multiplying the constants.  This eliminates 3 large and power draining multipliers.  It also simplifies the final adder from 7 input to 4.
+We will optimize power by removing duplicate multipliers.  These duplicate multipliers are created because the filter is symmetric, therefore an adder can be used remove an adder.  In the naive filter, shown in Figure \ref{fig:naivefilter}, the constant is multiplied against each register value.  Since the constants are symmetric, ie $C0$ is the same as $C6$, this can be optimized using the associative rule.  In Figure \ref{fig:optimizedfilter}, you can see that we have removed 3 of the multipliers.  Instead, we add the values in the registers before multiplying the constants.  This eliminates 3 large and power draining multipliers.  It also simplifies the final adder from 7 input to 4.
 
 
 \begin{figure}[ht]
