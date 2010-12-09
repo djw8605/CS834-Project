@@ -24,7 +24,7 @@ The source of the VHDL components are included in the appendix.
 
 
 \subsection{Synthesis}
-Synthesis was done using rc cadence synthesizer and the Encounter tool.  For the encounter tool, we followed the instructions listed in lab 3.  The Encounter routing and placement on the \verb=CONV_MULT= component took 45 minutes to complete while the FullAdder was near instant.  See Figure \ref{fig:convmult} for the sythensized Convolution hardware.
+Synthesis was done using rc cadence synthesizer and the Encounter tool.  For the encounter tool, we followed the instructions listed in Lab 3.  The Encounter routing and placement on the \verb=CONV_MULT= component took 45 minutes to complete while the FullAdder was near instant.  See Figure \ref{fig:convmult} for the sythensized Convolution hardware.
 
 \begin{figure}[htbp]
 \centering
@@ -35,7 +35,7 @@ Synthesis was done using rc cadence synthesizer and the Encounter tool.  For the
 
 
 \subsection{Final Layout \& Routing}
-Since each component was designed in a separate VHDL file, they had to be connected at a high level.  See Figure \ref{fig:filterschematic} for the schematic of the connected high level components.  This logical layout closely resembles the layout shown in \ref{fig:optimizedfilter}.
+Since each component was designed in a separate VHDL file, they had to be connected at a high level.  See Figure \ref{fig:filterschematic} for the schematic of the connected high level components.  This logical layout closely resembles the layout shown in Figure \ref{fig:optimizedfilter}.
 
 % 2500x2500 
 After creating the schematic, we used the Cadence router to route between the top level components.  The chip size needed to be increased to 2500x2500 microns in order to accommodate the components.  The convolution chip alone is 1500x1500 microns.  The routing completes in about an hour with no un-routable endpoints.  See Figure \ref{fig:filterrouted} for the routed final layout.
