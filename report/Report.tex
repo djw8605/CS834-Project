@@ -14,6 +14,16 @@ pdfkeywords={CSCE834, Weitzel, Tsutano, Filter, VLSI}
 \usepackage{graphicx}
 \usepackage{fullpage}
 
+\usepackage{color}
+\usepackage{listings}
+\newcommand{\VhdlListing}{\lstinputlisting[frame=lines, framesep=0.1in, framerule=0.8pt, xleftmargin=0.5in, breaklines=true, language=VHDL, tabsize=4, numbers=left, basicstyle=\footnotesize, basicstyle=\small, numberstyle=\footnotesize]}
+\newcommand{\CppListing}{\lstinputlisting[frame=lines, framesep=0.1in, framerule=0.8pt, xleftmargin=0.5in, breaklines=true, language=C++, tabsize=4, numbers=left, basicstyle=\footnotesize, basicstyle=\small, numberstyle=\footnotesize]}
+\newcommand{\TextListing}{\lstinputlisting[frame=lines, framesep=0.1in, framerule=0.8pt, xleftmargin=0.5in, breaklines=true, tabsize=4, numbers=left, basicstyle=\footnotesize, basicstyle=\small, numberstyle=\footnotesize]}
+
+%\usepackage{fancyvrb}
+%\newcommand{\VhdlListing}[1]{\VerbatimInput[frame=lines, framesep=0.1in,
+%		framerule=0.8pt, numbers=left, tabsize=4, xleftmargin=0.5in]{#1}}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
@@ -37,6 +47,61 @@ pdfkeywords={CSCE834, Weitzel, Tsutano, Filter, VLSI}
 
 \section{Conclusion} \label{sec:conclusion}
 \input{conclusion}
+
+\newpage
+\appendix
+
+\section{VHDL Design Files}
+
+\subsection{Top Level}
+
+\subsubsection{Test Bench (\texttt{filter\_tb.vhd})}
+\VhdlListing{../vhdl/filter_tb.vhd}
+\label{lst:filter_tb.vhd}
+
+\subsubsection{Top Level Component (\texttt{filter.vhd})}
+\VhdlListing{../vhdl/filter.vhd}
+\label{lst:filter.vhd}
+
+\subsection{Shift Register}
+
+\subsubsection{Shift Register (\texttt{shiftreg.vhd})}
+\VhdlListing{../vhdl/shiftreg.vhd}
+\label{lst:shiftreg.vhd}
+
+\subsubsection{D-Flip Flop (\texttt{dff.vhd})}
+\VhdlListing{../vhdl/dff.vhd}
+\label{lst:dff.vhd}
+
+\subsection{Convolution}
+
+\subsubsection{Convolution (\texttt{convmult.vhd})}
+\VhdlListing{../vhdl/convmult.vhd}
+\label{lst:convmult.vhd}
+
+\subsection{Summation}
+
+\subsubsection{Sum (\texttt{sum.vhd})}
+\VhdlListing{../vhdl/sum.vhd}
+\label{lst:sum.vhd}
+
+\subsubsection{16-Bit Adder (\texttt{add16.vhd})}
+\VhdlListing{../vhdl/add16.vhd}
+\label{lst:add16.vhd}
+
+\subsubsection{Full Adder (\texttt{fulladder.vhd})}
+\VhdlListing{../vhdl/fulladder.vhd}
+\label{lst:fulladder.vhd}
+
+\section{C++ Files for Verification}
+
+\subsection{C++ Source Code (\texttt{filter.cpp})}
+\CppListing{../filter_verification/filter.cpp}
+\label{lst:filter.cpp}
+
+\subsection{Test Case (\texttt{testcase.txt})}
+\TextListing{../filter_verification/testcase.txt}
+\label{lst:testcase.txt}
 
 \if 0
 
