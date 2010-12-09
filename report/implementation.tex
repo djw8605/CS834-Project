@@ -1,8 +1,17 @@
 \subsection{VHDL Design}
+We decided to design our filter using as much HDL as possible.  Therefore, every component is written in VHDL, and are sythesized for the final design.
 
+
+Separate components:
+\begin{itemize}
+\item D\_FF
+\item CONV\_MULT
+\item ADD16
+\item FullAdder
+\end{itemize}
 
 \subsection{Functional Verification}
-
+\input{functional-verification}
 
 
 \subsection{Synthesis}
