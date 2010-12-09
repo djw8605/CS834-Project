@@ -17,27 +17,27 @@ Figure \ref{fig:q7} shows the comparison between two's complement integer and Q7
 
 \subsection{Filter Characteristics}
 
-The coefficients for the filter is shown in Table \ref{tab:coefficients}. These values were computed using Filter Design \& Analysis Tool in Matlab Signal Processing Toolbox which is one of the most widely used filter design tool in the industry. 
-
 \begin{table}[ht]
 \centering
-\begin{tabular}{ c | r }
+\begin{tabular}{ c | r | r }
 \hline
-Coeffiecient & Value \\
+Coeffiecient & Value & Q15 \\
 \hline \hline
-$C_0$ & -1.55107884796477e-18 \\
-$C_1$ & -0.022663985459552 \\
-$C_2$ & 1.04697822237622e-17 \\
-$C_3$ & 0.273977082565524 \\
-$C_4$ & 0.497373805788057 \\
-$C_5$ & 0.273977082565524 \\
-$C_6$ & 1.04697822237622e-17 \\
-$C_7$ & -0.0226639854595526 \\
-$C_8$ & -1.55107884796477e-18 \\
+$C_0$ & -0.022663985459552   & \texttt{1111110100011010} \\
+$C_1$ & 1.04697822237622e-17 & \texttt{0000000000000000} \\
+$C_2$ & 0.273977082565524    & \texttt{0010001100010001}\\
+$C_3$ & 0.497373805788057    & \texttt{0011111110101001}\\
+$C_4$ & 0.273977082565524    & \texttt{0010001100010001}\\
+$C_5$ & 1.04697822237622e-17 & \texttt{0000000000000000} \\
+$C_6$ & -0.022663985459552   & \texttt{1111110100011010} \\
 \end{tabular}
 \caption{Coefficient values}
 \label{tab:coefficients}
 \end{table}
+
+The coefficients for the filter is shown in Table \ref{tab:coefficients}. These values were computed using Filter Design \& Analysis Tool (Figure \ref{fig:matlab}) in Matlab Signal Processing Toolbox which is one of the most widely used filter design tool in the industry. We have chosen FIR filter with Hamming window with order of 8. This filter is also one of the most widely used in the industry and has straight-forward characteristic.
+
+
 
 
 \begin{figure}[ht]
