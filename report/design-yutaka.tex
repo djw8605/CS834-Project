@@ -1,6 +1,6 @@
 \subsection{Q15 Format} \label{sec:q15}
 
-For our filter design, fixed format number format called Q is used. Unlike floating point numbers, Q-format numbers require only standard integer ALU to perform rational number calculations. This means that we do not need to add an FPU to our design which requires additional power.
+For our filter design, fixed format number format called Q is used. Unlike floating point numbers, Q-format numbers require only a standard integer Arithmetic Logic Unit (ALU) to perform rational number calculations. This means that we do not need to add an Floating Point Unit (FPU) to our design, which requires additional power.
 
 Q format numbers are represented using the Q notation which is written as Q$m,n$ where $m$ is the number of bits set aside to designate the two's complement integer portion of the number, and $n$ is the number of bits used to designate the fractional portion of the number.
 
@@ -35,7 +35,7 @@ $C_6$ & -0.022663985459552   & \texttt{1111110100011010} \\
 \label{tab:coefficients}
 \end{table}
 
-The coefficients for the filter is shown in Table \ref{tab:coefficients}. These values were computed using Filter Design \& Analysis Tool (Figure \ref{fig:matlab}) in Matlab Signal Processing Toolbox which is one of the most widely used filter design tool in the industry. We have chosen FIR filter with Hamming window with order of 8. This filter is also one of the most widely used in the industry and has straight-forward characteristic.
+The coefficients for the filter is shown in Table \ref{tab:coefficients}. These values were computed using Filter Design \& Analysis Tool (Figure \ref{fig:matlab}) in Matlab Signal Processing Toolbox which is one of the most widely used filter design tools in the industry. We have chosen a $8^{\rm th}$ order FIR filter with a Hamming window. This filter is also one of the most widely used in the industry and has straight-forward characteristic.
 
 \begin{figure}[htbp]
 	\centering
