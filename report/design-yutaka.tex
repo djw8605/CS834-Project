@@ -6,7 +6,7 @@ Q format numbers are represented using the Q notation which is written as Q$m,n$
 
 In our case, we use simplified notation Q$n$ since we assume that the numbers are normalized into the range of $[-1, 1)$. Notice that this assumption does not affect the generality of the filter, but it simplifies the multiplication operation because the multiplication result never exceeds the range of $[-1, 1)$.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=1.5]{images/q7}
 	\caption{Comparison between integer and Q7 format.}
@@ -17,7 +17,7 @@ Figure \ref{fig:q7} shows the comparison between two's complement integer and Q7
 
 \subsection{Filter Characteristics}
 
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{ c | r | r }
 \hline
@@ -37,7 +37,7 @@ $C_6$ & -0.022663985459552   & \texttt{1111110100011010} \\
 
 The coefficients for the filter is shown in Table \ref{tab:coefficients}. These values were computed using Filter Design \& Analysis Tool (Figure \ref{fig:matlab}) in Matlab Signal Processing Toolbox which is one of the most widely used filter design tool in the industry. We have chosen FIR filter with Hamming window with order of 8. This filter is also one of the most widely used in the industry and has straight-forward characteristic.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=6.5in]{images/matlab}
 	\caption{Matlab Filter Design \& Analysis Tool.}

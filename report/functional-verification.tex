@@ -1,6 +1,6 @@
 To verify the correctness of the VHDL design files, we have written a C++ program that generates test cases. This program first generates test input with random noise. Then it computes the output using the equivalent filter algorithm in Q15 format. The result is stored in a text file (Appendix \ref{lst:testcase.txt}) which can be read by a VHDL testbench \texttt{filter\_tb.vhd} (Appendix \ref{lst:filter_tb.vhd}).
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=6.5in]{images/modelsim}
 	\caption{ModelSim from Mentor Graphics was used for VHDL simulation.}
