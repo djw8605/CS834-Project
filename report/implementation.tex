@@ -1,4 +1,14 @@
+
+\subsection{Dataflow}
+In this section I will describe the dataflow shown in Figure \ref{fig:optimizedfilter}.  The figure outlines the top level components that are described later in section \ref{sec:vhdldesign}.  
+
+We designed the filster to have 7 16-bit registers.  Each of the 7 registers' data is connected to the next register.  At each clock pulse, the registers' data is shifted to the next register. The input is placed at $D0$ and the value stored in $D6$ is not saved.
+
+For $D0$ through $D2$, the registers' output is also connected to an adder.  Because the filter is symmetric, we are able to add two register values together before multiplying by the constants $C0$ through $C2$.  After the addition, the values are multiplied by the constants specified in Table \ref{tab:coefficients}.  The products are then summed using three ripple-carry adders.
+
+
 \subsection{VHDL Design}
+\label{sec:vhdldesign}
 We decided to design our filter using as much HDL as possible.  Therefore, every component is written in VHDL, and are synthesized for the final design. The VHDL is separated into components listed below.  These components are then synthesized using the \texttt{rc} and Encounter cadence synthesizer.  
 
 Separate components:
