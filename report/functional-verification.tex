@@ -9,4 +9,13 @@ To verify the correctness of the VHDL design files, we have written a C++ progra
 
 For VHDL simulation, we used ModelSim from Mentor Graphics. This tool loads and compiles all VHDL files including the test bench, then shows the waveform and output to the window. Our testbench file follows the VHDL standard and prints the results into a text file, so it should work on other environments other than ModelSim.
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=5.5in]{images/testcase_plot}
+	\caption{Example of one of the test cases.}
+	\label{fig:testcase_plot}
+\end{figure}
+
+Figure \ref{fig:testcase_plot} shows a waveform of one of the test cases. It clearly shows that the high-frequency noise is filtered out.
+
 We verified that the every bit of the C++ program output and VHDL testbench output matched, therefore the VHDL should be correct with high probability.
